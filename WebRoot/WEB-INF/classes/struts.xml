@@ -45,5 +45,8 @@
 		<action name="queryStudentByClass" class="com.sanqing.action.QueryStudentByClass">
 			<result name="success">/teacher/studentManage.jsp</result><!--跳转到学生管理页面 -->
 		</action>
+		<action name="chooseLabel" class="com.sanqing.action.ChooseLabelAction">
+			<result name="success">/teacher/labelManage.jsp</result><!--跳转到学生管理页面 -->
+		</action>
 	</package>
 </struts>

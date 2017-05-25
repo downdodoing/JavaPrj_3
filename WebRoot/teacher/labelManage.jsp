@@ -29,7 +29,7 @@ body {
 					width="100%" height="31" border="0" cellpadding="0" cellspacing="0"
 					class="left_topbg" id="table2">
 					<tr>
-						<td height="31"><div class="titlebt">查看试题</div></td>
+						<td height="31"><div class="titlebt">设置标签</div></td>
 					</tr>
 				</table></td>
 			<td width="16" valign="top" background="images/mail_rightbg.gif"><img
@@ -47,52 +47,26 @@ body {
 								<div id="showSubject" align="center">
 									<!--显示试题-->
 									<table border="0" cellspacing="10" cellpadding="0">
-										<tr>
-											<td>试题编号:</td>
-											<td>${subject.subjectID}</td>
-										</tr>
-										<tr>
-											<td>试题题目:</td>
-											<td>${subject.subjectTitle}</td>
-										</tr>
-										<tr>
-											<td>选项A:</td>
-											<td>${subject.subjectOptionA}</td>
-										</tr>
-										<tr>
-											<td>选项B:</td>
-											<td>${subject.subjectOptionB}</td>
-										</tr>
-										<tr>
-											<td>选项C:</td>
-											<td>${subject.subjectOptionC}</td>
-										</tr>
-										<tr>
-											<td>选项D:</td>
-											<td>${subject.subjectOptionD}</td>
-										</tr>
-										<tr>
-											<td>答案:</td>
-											<td>${subject.subjectAnswer}</td>
-										</tr>
-										<tr>
-											<td valign="top">答案解析:</td>
-											<td valign="top">${subject.subjectParse}</td>
-										</tr>
+										<form action="subjectQuery.action" method="post">
+											<tr>
+												<td>试题编号:</td>
+												<td>${subjectID}</td>
+											</tr>
+											<tr>
+												<td>选择标签:</td>
+												<td><select>
+														<s:iterator value="#request.labelList" var="label">
+															<option value="${label.labelID}">${label.labelName}</option>
+														</s:iterator>
+												</select></td>
+											</tr>
+											<tr><input name="submit" type="Submit" value="确定"/></tr>
+										</form>
 									</table>
 								</div></td>
 					</tr>
 
 				</table></td>
-			<td background="images/mail_rightbg.gif">&nbsp;</td>
-		</tr>
-		<tr>
-			<td valign="bottom" background="images/mail_leftbg.gif"><img
-				src="images/buttom_left2.gif" width="17" height="17" /></td>
-			<td background="images/buttom_bgs.gif"><img
-				src="images/buttom_bgs.gif" width="17" height="17"></td>
-			<td valign="bottom" background="images/mail_rightbg.gif"><img
-				src="images/buttom_right2.gif" width="16" height="17" /></td>
 		</tr>
 	</table>
 </body>

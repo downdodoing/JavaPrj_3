@@ -16,5 +16,6 @@
 		<mapping resource="com/sanqing/po/Student.hbm.xml" />
 		<mapping resource="com/sanqing/po/Teacher.hbm.xml" />
 		<mapping resource="com/sanqing/po/Subject.hbm.xml" />
+		<mapping resource="com/sanqing/po/Label.hbm.xml" />
 	</session-factory>
 </hibernate-configuration>

@@ -54,7 +54,7 @@
 							<td>${subject.subjectID}</td>
 							<td align="left">${subject.subjectTitle}</td>
 							<td>${subject.subjectAnswer}</td>
-							<td><a href="subjectParticular.action?subjectID=${subject.subjectID}">查看</a></td>
+							<td><a href="chooseLabel.action?subjectID=${subject.subjectID}">标签</a></td>
 							<td><a href="subjectParticular.action?subjectID=${subject.subjectID}">查看</a></td>
 							<td><a href="subjectUpadateBefore.action?subjectID=${subject.subjectID}">更新</a></td>
 							<td><a href="subjectDelete?subjectID=${subject.subjectID}">删除</a></td>
